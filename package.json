@@ -1,0 +1,45 @@
+{
+  "name": "@immerspiele/blone",
+  "version": "0.0.1-beta.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "types": "./index.d.ts"
+    },
+    "./parse": {
+      "import": "./parse.js",
+      "require": "./parse.cjs",
+      "types": "./parse.d.ts"
+    },
+    "./render": {
+      "import": "./render.js",
+      "require": "./render.cjs",
+      "types": "./render.d.ts"
+    },
+    "./filters": {
+      "import": "./filters.js",
+      "require": "./filters.cjs",
+      "types": "./filters.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "build": "tsdown"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "A lightweight templating engine for JavaScript and TypeScript.",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.0.5",
+    "tsdown": "^0.15.12",
+    "vitest": "^4.0.5"
+  }
+}
