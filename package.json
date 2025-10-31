@@ -5,6 +5,9 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "import": "./index.js",
@@ -32,7 +35,12 @@
   ],
   "scripts": {
     "test": "vitest",
-    "build": "tsdown"
+    "build": "tsdown",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immerspiele/blone.git"
   },
   "author": "",
   "license": "MIT",
