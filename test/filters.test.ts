@@ -25,6 +25,12 @@ describe('Filters', () => {
     expect(result).toBe('Hello, world!');
   });
 
+  test('capitalize filter', () => {
+    const template = parse('Hello, {name|capitalize}!');
+    const result = render(template, { name: 'world' }, context);
+    expect(result).toBe('Hello, World!');
+  });
+
   test('chained filters', () => {
     const template = parse('Hello, {name|trim|uppercase}!');
     const result = render(template, { name: '  world  ' }, context);
