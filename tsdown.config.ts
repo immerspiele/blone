@@ -8,5 +8,6 @@ export default defineConfig({
     './src/index.ts',
     './src/parse.ts',
     './src/render.ts',
+    './src/filters.ts',
   ],
 });
